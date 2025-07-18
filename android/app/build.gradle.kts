@@ -6,9 +6,9 @@ plugins {
 }
 
 android {
-    namespace = "com.example.arcore"
+    namespace 'com.darillo.arcore_flutter_plugin'
     compileSdk = flutter.compileSdkVersion
-    ndkVersion = flutter.ndkVersion
+    ndkVersion "27.0.12077973"
 
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
@@ -44,12 +44,7 @@ flutter {
 }
 
 dependencies {
-    // Provides ARCore Session and related resources.
-    implementation 'com.google.ar:core:1.37.0'
-
-    // Provides ArFragment, and other UX resources.
-    implementation 'com.google.ar.sceneform.ux:sceneform-ux:1.17.1'
-
-    // Alternatively, use ArSceneView without the UX dependency.
-    implementation 'com.google.ar.sceneform:core:1.17.1'
+    implementation("com.google.ar:core:1.37.0")
+    implementation("com.google.ar.sceneform.ux:sceneform-ux:1.17.1")
+    implementation("com.google.ar.sceneform:core:1.17.1")
 }
